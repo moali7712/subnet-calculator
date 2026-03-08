@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Subnet Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="circle" style="top:10%; left:5%;"></div>
+<div class="circle" style="top:60%; left:70%;"></div>
+<div class="square" style="top:20%; left:50%;"></div>
+<div class="square" style="top:70%; left:20%;"></div>
+<div class="icon" style="top:30%; left:40%;"></div>
+<div class="icon" style="top:50%; left:80%;"></div>
+
+<div class="container">
+
+  <div class="header">
+    <img src="https://cdn-icons-png.flaticon.com/512/2881/2881142.png" alt="Network Icon">
+    <h1>Subnet Calculator</h1>
+    <p>Learn Networking Easily</p>
+  </div>
+
+  <div class="card">
+    <input type="text" id="ip" placeholder="Enter IP Address (192.168.1.1)">
+    <input type="number" id="cidr" placeholder="Enter CIDR (Example: 24)">
+    <button onclick="calculateSubnet()">Calculate</button>
+  </div>
+
+  <div class="result" id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* ------------------------- */
+/*  جسم الصفحة Body  */
+/* ------------------------- */
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #1a1a2e; /* خلفية غامقة هادئة */
+    position: relative;
+}
+
+/* ------------------------- */
+/*  Container التطبيق  */
+/* ------------------------- */
+.container {
+    background: rgba(255, 255, 255, 0.08); /* شفاف قليل على الغامق */
+    width: 420px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* ------------------------- */
+/*  Header والنصوص  */
+/* ------------------------- */
+.header img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.header p {
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+/* ------------------------- */
+/*  الإدخالات Inputs  */
+/* ------------------------- */
+.card input {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #444;
+    font-size: 15px;
+    background: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+
+/* ------------------------- */
+/*  الأزرار Buttons  */
+/* ------------------------- */
+button {
+    background: #26c6da;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #00acc1;
+    transform: scale(1.05);
+}
+
+/* ------------------------- */
+/*  النتائج Result  */
+/* ------------------------- */
+.result {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.result p {
+    background: rgba(255,255,255,0.1);
+    padding: 12px;
+    border-left: 5px solid #26c6da;
+    border-radius: 8px;
+    margin: 8px 0;
+    color: #ffffff;
+}
+
+/* ------------------------- */
+/*  الأشكال المتحركة Background  */
+/* ------------------------- */
+
+/* دوائر شفافة */
+.circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(38, 198, 218, 0.6);
+    animation: float 25s linear infinite;
+}
+
+/* مربعات شفافة */
+.square {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 138, 101, 0.5);
+    transform: rotate(45deg);
+    animation: float2 30s linear infinite;
+}
+
+/* أيقونات كرتونية للشبكات */
+.icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/2881/2881142.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    animation: float3 35s linear infinite;
+}
+
+/* ------------------------- */
+/*  Keyframes للحركة  */
+/* ------------------------- */
+@keyframes float {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(50px, 30px); }
+    100% { transform: translate(0,0); }
+}
+
+@keyframes float2 {
+    0% { transform: rotate(45deg) translate(0,0); }
+    50% { transform: rotate(45deg) translate(-40px, 20px); }
+    100% { transform: rotate(45deg) translate(0,0); }
+}
+
+@keyframes float3 {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(60px,-20px); }
+    100% { transform: translate(0,0); }
+}
